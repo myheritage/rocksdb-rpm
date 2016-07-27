@@ -38,7 +38,7 @@ Requires: %{name}, zlib-devel, bzip2-devel, snappy-devel, lz4-devel
 
 %build
 %{?scl:scl enable %{scl} - << \EOF}
-make %{?_smp_mflags} shared_lib
+PORTABLE=1 make %{?_smp_mflags} shared_lib
 %{?scl:EOF}
 
 %install
