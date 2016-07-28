@@ -5,7 +5,7 @@
 
 Name: rocksdb		
 Version: 4.8	
-Release:	1%{?dist}
+Release:	%{?release}%{!?release:1}%{?dist}
 Summary: RocksDB	
 
 Group: Application/Databases		
